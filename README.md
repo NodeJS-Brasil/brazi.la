@@ -5,13 +5,9 @@ A fresh new CMS made with MEAN and love :P
 
 ## Philosophy
 
-( guidelines gerais do projeto )
-
 ## Example (no caso de bibliotecas)
 
 ## Installing
-
-( npm install ...)
 
 ## Getting started / basic usage
 
