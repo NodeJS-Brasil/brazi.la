@@ -21,7 +21,7 @@ A fresh new CMS made with MEAN and love :P
 
 [The MIT License](http://nodejsbrasil.mit-license.org/) @NodeJSBrasil
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wearefractal/gulp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/luanmuniz/brazi.la/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 [travis-url]: https://travis-ci.org/luanmuniz/brazi.la
 [travis-image]: https://travis-ci.org/luanmuniz/brazi.la.png?branch=master
