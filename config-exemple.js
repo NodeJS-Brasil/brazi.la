@@ -18,12 +18,12 @@ module.exports = {
 		]
 	},
 
-    development: {
-        url: 'http://localhost/brazila',
-        mail: {},
-        database: {},
-    },
+	development: {
+		url: 'http://localhost/brazila',
+		mail: {},
+		database: {},
+	},
 
-    production: {},
+	production: {},
 
 };
