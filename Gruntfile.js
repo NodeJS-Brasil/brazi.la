@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             },
             server: {
                 files: [
-                    'index.js'
+                    '**/*.js'
                 ],
                 tasks: ['develop:server']
             }
