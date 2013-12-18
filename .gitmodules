@@ -1,0 +1,3 @@
+[submodule "themes/rio"]
+	path = themes/rio
+	url = git@github.com:NodeJS-Brasil/Rio.git
