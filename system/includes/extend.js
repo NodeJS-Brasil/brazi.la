@@ -23,7 +23,7 @@
 			result = {};
 		}
 
-		for (index=0;index<size;++index){
+		for (index = 0; index < size; ++index){
 			if (typeOf(item = items[index]) === 'object'){
 				for (key in item){
 					result[key] = deep ? clone(item[key]) : item[key];
@@ -43,7 +43,7 @@
 			output = [];
 			size = input.length;
 
-			for (index=0;index<size;++index){
+			for (index = 0; index < size; ++index){
 				output[index] = clone(input[index]);
 			}
 

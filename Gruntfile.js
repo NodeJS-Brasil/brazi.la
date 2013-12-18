@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 	require('load-grunt-tasks')(grunt);
 
@@ -15,23 +15,13 @@ module.exports = function (grunt) {
 		},
 		jshint: {
 			options: {
-				curly: true,
-				globalstrict: true,
-				quotmark: 'single',
-				smarttabs: true,
-				eqeqeq: true,
-				eqnull: true,
-				browser: true,
-				indent: 4,
-				undef: true,
-				unused: true,
-				evil: true,
-				devel:true,
-				jquery: true,
-				node: true,
-				ignores: ['node_modules/**/*']
+				jshintrc: '.jshintrc',
+				ignores: [ 'node_modules/**/*' ]
 			},
-			uses_defaults: ['**/*.js'],
+			uses_defaults: [ '**/*.js' ],
+		},
+		jscs: {
+			uses_defaults: '<%= jshint.uses_defaults %>'
 		},
 		watch: {
 			options: {
@@ -42,12 +32,12 @@ module.exports = function (grunt) {
 				files: [
 					'**/*.js'
 				],
-				tasks: ['develop:server']
+				tasks: [ 'develop:server' ]
 			}
 		}
 	});
 
 	grunt.config.requires('watch.server.files');
-	grunt.registerTask('default', ['develop', 'watch']);
-	grunt.registerTask('test', ['jshint']);
+	grunt.registerTask('default', [ 'develop', 'watch' ]);
+	grunt.registerTask('test', [ 'jshint' ]);
 };
