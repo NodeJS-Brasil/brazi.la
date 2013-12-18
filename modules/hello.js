@@ -4,7 +4,6 @@
  *
  */
 
-
-module.exports = function(req, red){
+module.exports = function(req, res){
 	console.log('Hello World!!');
 };
