@@ -3,27 +3,26 @@ Brazi.la [![Build Status][travis-image]][travis-url] [![Dependency Status][depst
 
 A fresh new CMS made with MEAN and love :P
 
-## Philosophy
-
-## Example (no caso de bibliotecas)
-
 ## Installing
 
-## Getting started / basic usage
+Run this:
 
-## Documentation
+```bash
+git clone git@github.com:NodeJS-Brasil/brazi.la.git brazila
+cd brazila
+npm install
+```
 
-## Tests
-
-## Platform support
+Create the config.js with your environment configs.
+Use the config-exemple.js for instructions
 
 ## Licence
 
 [The MIT License](http://nodejsbrasil.mit-license.org/) @NodeJSBrasil
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/luanmuniz/brazi.la/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/NodeJS-Brasil/brazi.la/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-[travis-url]: https://travis-ci.org/luanmuniz/brazi.la
-[travis-image]: https://travis-ci.org/luanmuniz/brazi.la.png?branch=master
-[depstat-url]: https://david-dm.org/luanmuniz/brazi.la
-[depstat-image]: https://david-dm.org/luanmuniz/brazi.la.png
+[travis-url]: https://travis-ci.org/NodeJS-Brasil/brazi.la
+[travis-image]: https://travis-ci.org/NodeJS-Brasil/brazi.la.png?branch=master
+[depstat-url]: https://david-dm.org/NodeJS-Brasil/brazi.la
+[depstat-image]: https://david-dm.org/NodeJS-Brasil/brazi.la.png
