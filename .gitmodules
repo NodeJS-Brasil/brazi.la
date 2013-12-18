@@ -1,3 +1,3 @@
-[submodule "themes/rio"]
-	path = themes/rio
-	url = git@github.com:NodeJS-Brasil/Rio.git
+[submodule "themes/Rio"]
+	path = themes/Rio
+	url = https://github.com/NodeJS-Brasil/Rio.git
