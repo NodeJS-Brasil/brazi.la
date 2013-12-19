@@ -1,6 +1,6 @@
 'use strict';
 
-exports.init = function(userConfigs){
+exports.init = function(userConfigs) {
 
 	var extend = require('../includes/extend'),
 		configs = {},
@@ -21,21 +21,21 @@ exports.init = function(userConfigs){
 		};
 
 	configs = extend(configs_default, userConfigs);
-	if(this.validateConfigs(configs) !== true){
+	if (this.validateConfigs(configs) !== true){
 		this.initServer(configs);
 	} else {
 		console.log(this.validateConfigs(configs));
 	}
 };
 
-exports.initServer = function(configs){
+exports.initServer = function(configs) {
 
 	var express = require('express'),
 		params = require('express-params'),
 		brazila = express(),
 		environment;
 
-	if(configs.environment === 'development'){
+	if (configs.environment === 'development'){
 		environment = configs.development;
 	} else {
 		environment = configs.production;
@@ -50,23 +50,23 @@ exports.initServer = function(configs){
 	brazila.use(brazila.router);
 
 	params.extend(brazila);
-	brazila.use(function(req, res){
-		res.send(404, { code: 2, error: 'That page don\'t get this type of request!'});
-		res.send(500, { code: 1, error: 'Server error, please try again later'});
+	brazila.use(function(req, res) {
+		res.send(404, { code: 2, error: 'That page don\'t get this type of request!' });
+		res.send(500, { code: 1, error: 'Server error, please try again later' });
 	});
-	brazila.listen(environment.port, function(){
+	brazila.listen(environment.port, function() {
 		console.log('Brazi.la server listening on port ' + environment.port);
 	});
 
 };
 
-exports.validateConfigs = function(userConfigs){
+exports.validateConfigs = function(userConfigs) {
 
-	if(typeof userConfigs !== 'object'){
+	if (typeof userConfigs !== 'object') {
 		return 'The configs settings need to be a object. Access http://brazi.la/getting-start for more information';
 	}
 
-	if(!userConfigs.development || !userConfigs.production){
+	if (!userConfigs.development || !userConfigs.production) {
 		return 'You need the environment configurations. Access http://brazi.la/getting-start for more information';
 	}
 
