@@ -6,9 +6,9 @@ module.exports = {
 		lang: 'en_US',
 		debug: false,
 		admin_url: 'admin',
-		modules_url: 'modules',
-		themes_url: 'themes',
-		uploads: 'uploads'
+		modules_folder: 'modules',
+		themes_folder: 'themes',
+		upload_folder: 'uploads'
 	},
 
 	personal: {
@@ -19,7 +19,7 @@ module.exports = {
 	},
 
 	development: {
-		url: 'http://localhost/brazila',
+		url: 'http://localhost/brazi.la',
 		mail: {},
 		database: {},
 	},
