@@ -29,15 +29,13 @@ module.exports = function(grunt) {
 				livereload: reloadPort
 			},
 			server: {
-				files: [
-					'**/*.js'
-				],
+				files: [ '**/*.js'  ],
 				tasks: [ 'develop:server' ]
 			}
 		}
 	});
 
 	grunt.config.requires('watch.server.files');
-	grunt.registerTask('default', [ 'develop', 'watch' ]);
-	grunt.registerTask('test', [ 'jshint' ]);
+	grunt.registerTask('default', [ 'develop', 'watch' ] );
+	grunt.registerTask('test', [ 'jshint', 'jscs' ] );
 };
