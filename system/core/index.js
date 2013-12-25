@@ -2,7 +2,7 @@
 
 exports.init = function(userConfigs) {
 
-	var extend = require('../includes/extend'),
+	var extend = require('../includes/extend').extend,
 		configs = {},
 		configs_default = {
 			general: {
@@ -21,6 +21,7 @@ exports.init = function(userConfigs) {
 		};
 
 	configs = extend(configs_default, userConfigs);
+
 	if (this.validateConfigs(configs) === true){
 		this.initServer(configs);
 	} else {
@@ -35,7 +36,7 @@ exports.initServer = function(configs) {
 		brazila = express(),
 		environment;
 
-	if (configs.environment === 'development'){
+	if (configs.general.environment === 'development'){
 		environment = configs.development;
 	} else {
 		environment = configs.production;
