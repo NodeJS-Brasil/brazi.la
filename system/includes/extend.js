@@ -6,31 +6,29 @@
 
 'use strict';
 
-(function() { 
+var slice = Array.prototype.slice,
+	each = Array.prototype.forEach;
 
-  var slice   = Array.prototype.slice,
-      each    = Array.prototype.forEach;
+function extend(obj) {
+	if (typeof obj !== 'object') {
+		throw obj + ' is not an object' ;
+	}
 
-  var extend = function(obj) {
-    if(typeof obj !== 'object') throw obj + ' is not an object' ;
+	var sources = slice.call(arguments, 1);
 
-    var sources = slice.call(arguments, 1); 
+	each.call(sources, function(source) {
+		if (source) {
+			for (var prop in source) {
+				if (typeof source[prop] === 'object' && obj[prop]) {
+					extend.call(obj, obj[prop], source[prop]);
+				} else {
+					obj[prop] = source[prop];
+				}
+			}
+		}
+	});
 
-    each.call(sources, function(source) {
-      if(source) {
-        for(var prop in source) {
-          if(typeof source[prop] === 'object' && obj[prop]) {
-            extend.call(obj, obj[prop], source[prop]);
-          } else {
-            obj[prop] = source[prop];
-          }
-        } 
-      }
-    });
+	return obj;
+}
 
-    return obj;
-  }
-
-  this.extend = extend;
-
-}).call(this);
+module.exports = extend;

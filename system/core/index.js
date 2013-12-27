@@ -2,16 +2,16 @@
 
 exports.init = function(userConfigs) {
 
-	var extend = require('../includes/extend').extend,
+	var extend = require('../includes/extend'),
 		configs = {},
 		configs_default = {
 			general: {
 				lang: 'en_US',
 				debug: false,
 				admin_url: 'admin',
-				modules_url: 'modules',
-				themes_url: 'themes',
-				uploads: 'uploads',
+				modules_folder: 'modules',
+				themes_folder: 'themes',
+				upload_folder: 'uploads',
 				environment: 'development'
 			},
 			personal: {
@@ -43,10 +43,10 @@ exports.initServer = function(configs) {
 	}
 
 	brazila.use(express.compress());
-	brazila.set('port', environment.port);
 	brazila.use(express.favicon(''));
 	brazila.use(express.logger('dev'));
-	brazila.use(express.bodyParser());
+	brazila.use(express.urlencoded());
+	brazila.use(express.json());
 	brazila.use(express.methodOverride());
 	brazila.use(brazila.router);
 

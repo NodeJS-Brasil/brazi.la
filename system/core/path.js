@@ -3,7 +3,7 @@
 var path = require('path'),
 	root = path.resolve(__dirname, '../../');
 
-module.exports = function(userConfig){
+module.exports = function(userConfig) {
 	var paths = {
 		'root' : root,
 		'configFile' : path.join(root, 'config.js'),
@@ -21,7 +21,7 @@ module.exports = function(userConfig){
 		'activeModules' : []
 	};
 
-	userConfig.personal.actived_modules.forEach(function(moduleName){
+	userConfig.personal.actived_modules.forEach(function(moduleName) {
 		paths.activeModules.push(path.join(paths.modulesPath, moduleName));
 	});
 
