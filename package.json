@@ -15,7 +15,8 @@
 		"url": "http://nodejsbrasil.mit-license.org/"
 	}],
 	"scripts": {
-		"start": "node index"
+		"start": "node index",
+		"test": "grunt -v test"
 	},
 	"engines": {
 		"node": "0.10.*"
