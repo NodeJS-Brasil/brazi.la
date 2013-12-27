@@ -18,7 +18,7 @@
 
 	"development": {
 		"port": 3000,
-		"url": "http://localhost/brazi.la",
+		"url": "http://localhost:3000",
 		"mail": {},
 		"database": {}
 	},
