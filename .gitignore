@@ -25,4 +25,4 @@ npm-debug.log
 *.cache
 backup/
 cache/
-config.js
+config.json

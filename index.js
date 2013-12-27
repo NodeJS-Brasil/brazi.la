@@ -4,16 +4,15 @@ var fs = require('fs'),
 	path = require('path'),
 	core = require('./system/core'),
 	config,
-	validConfig,
-	paths;
+	validConfig;
 
-fs.exists(path.resolve(__dirname, 'config.js'), function(exist){
+fs.exists(path.resolve(__dirname, 'config.json'), function(exist) {
 
-	if(!exist){
+	if (!exist){
 		return console.error('Missing Config file');
 	}
 
-	config = require('./config');
+	config = require('./config.json');
 	validConfig = core.validateConfigs(config);
 
 	if (validConfig === true) {
