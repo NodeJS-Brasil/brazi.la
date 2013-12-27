@@ -4,8 +4,6 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 	require('load-grunt-tasks')(grunt);
 
-	var reloadPort = 35729;
-
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		develop: {
@@ -16,9 +14,9 @@ module.exports = function(grunt) {
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc',
-				ignores: [ 'node_modules/**/*' ]
+				ignores: [ 'node_modules/**' ]
 			},
-			uses_defaults: [ '**/*.js' ],
+			uses_defaults: [ 'index.js', 'system/**/*.js', 'admin/**/*.js' ],
 		},
 		jscs: {
 			uses_defaults: '<%= jshint.uses_defaults %>'
@@ -26,10 +24,10 @@ module.exports = function(grunt) {
 		watch: {
 			options: {
 				nospawn: true,
-				livereload: reloadPort
+				livereload: 35729
 			},
 			server: {
-				files: [ '**/*.js'  ],
+				files: '<%= jshint.uses_defaults %>',
 				tasks: [ 'develop:server' ]
 			}
 		}
