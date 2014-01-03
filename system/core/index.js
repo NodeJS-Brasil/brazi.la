@@ -22,7 +22,7 @@ exports.init = function(userConfigs) {
 
 	configs = extend(configs_default, userConfigs);
 
-	if (this.validateConfigs(configs) === true){
+	if (this.validateConfigs(configs)){
 		this.initServer(configs);
 	} else {
 		console.log(this.validateConfigs(configs));
