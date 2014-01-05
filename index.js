@@ -15,10 +15,8 @@ fs.exists(path.resolve(__dirname, 'config.json'), function(exist) {
 	config = require('./config.json');
 	validConfig = core.validateConfigs(config);
 
-	if (validConfig === true) {
+	if (validConfig) {
 		core.init(config);
-	} else {
-		console.log(validConfig);
 	}
 
 });

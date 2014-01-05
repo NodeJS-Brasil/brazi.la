@@ -22,10 +22,8 @@ exports.init = function(userConfigs) {
 
 	configs = extend(configs_default, userConfigs);
 
-	if (this.validateConfigs(configs) === true){
+	if (this.validateConfigs(configs)){
 		this.initServer(configs);
-	} else {
-		console.log(this.validateConfigs(configs));
 	}
 };
 
@@ -60,11 +58,13 @@ exports.initServer = function(configs) {
 exports.validateConfigs = function(userConfigs) {
 
 	if (typeof userConfigs !== 'object') {
-		return 'The configs settings need to be a object. Access http://brazi.la/getting-start for more information';
+		console.log('The configs settings need to be a object. Access http://brazi.la/getting-start for more information');
+        return false;
 	}
 
 	if (!userConfigs.development || !userConfigs.production) {
-		return 'You need the environment configurations. Access http://brazi.la/getting-start for more information';
+		console.log('You need the environment configurations. Access http://brazi.la/getting-start for more information');
+        return false;
 	}
 
 	return true;

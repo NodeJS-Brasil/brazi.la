@@ -26,3 +26,4 @@ npm-debug.log
 backup/
 cache/
 config.json
+.idea/
